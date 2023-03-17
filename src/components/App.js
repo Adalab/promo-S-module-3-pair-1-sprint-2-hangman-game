@@ -11,7 +11,9 @@ import Dummy from './Dummy';
 import Solution from './Solution';
 import Errorletters from './Errorletters';
 import Form from './Form';
- 
+import Footer from './Footer'; 
+import Instructions from './Instructions';
+import Options from './Options';
 
 function App() {
   const [word, setWord] = useState('');
@@ -77,6 +79,8 @@ function App() {
        <Header/>
      
       <main className='main'>
+        <Instructions/>
+
         <section>
           <Solution renderSolution={renderSolutionLetters}/>
 
@@ -90,7 +94,7 @@ function App() {
         </section>
         <Dummy numError={getNumberOfErrors()}/>
       </main>
-     <footer></footer>
+     <Footer/>
     </div>
   );
 }
